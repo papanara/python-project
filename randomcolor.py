@@ -7,7 +7,7 @@ from random import choice
 def generate_color():
     root = tk.Tk()
     root.geometry('600x350')
-    root.rezisable(False, False)
+    root.resizable(False, False)
     root.title('Generate Random Color')
     root.background='#FFFFFF'
 
