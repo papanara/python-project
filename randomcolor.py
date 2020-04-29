@@ -25,10 +25,17 @@ def generate_color():
         color_two_hexa_code.insert(0, color_two_code)
         color_three_hexa_code.delete(0, 7)
         color_three_hexa_code.insert(0, color_three_code)
-    
-    def convert_hexa_to_rgb():
-        """Convert hexa code to rgb"""
-        pass
+
+        # create RGB Color code
+        rgb1 = [int(color_one_code[1:3], 16),int(color_one_code[3:5], 16),int(color_one_code[5:7], 16)]
+        rgb2 = [int(color_two_code[1:3], 16),int(color_two_code[3:5], 16),int(color_two_code[5:7], 16)]
+        rgb3 = [int(color_three_code[1:3], 16),int(color_three_code[3:5], 16),int(color_three_code[5:7], 16)]
+        color_one_rgb_code.delete(0, len(color_one_rgb_code.get()))
+        color_one_rgb_code.insert(0, rgb1)
+        color_two_rgb_code.delete(0, len(color_two_rgb_code.get()))
+        color_two_rgb_code.insert(0, rgb2)
+        color_three_rgb_code.delete(0, len(color_three_rgb_code.get()))
+        color_three_rgb_code.insert(0, rgb3)
 
     # widgets
     heading_title = tk.Label(root, text='Generate Random Color', font=('', 14, 'bold'))
